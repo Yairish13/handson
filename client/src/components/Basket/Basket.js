@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { memo } from 'react';
 import AllProducts from '../AllProducts/AllProducts';
 
-const Basket = React.memo(({ products }) => {
+const Basket = ({ products }) => {
   console.log('Basket re-rendered'); 
   return (
     <div className='basket'>
@@ -9,6 +9,6 @@ const Basket = React.memo(({ products }) => {
       <AllProducts products={products} />
     </div>
   );
-});
+};
 
-export default Basket;
+export default memo(Basket);

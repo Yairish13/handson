@@ -16,6 +16,7 @@ function App() {
     basket: [],
     page: 1
   })
+  const basket = useMemo(() => productsList.basket, [productsList.basket]);
   const [counter, setCounter] = useState(1);
   const { isLoading, data, fetchData, setIsLoading } = useFetch();
 
